@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>概念学习：Skill（AI 技能）</title>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; color: #333; background: #fff; line-height: 1.85; }
+  h1 { font-size: 26px; border-bottom: 3px solid #4a6fa5; padding-bottom: 10px; }
+  h2 { font-size: 20px; color: #4a6fa5; margin-top: 40px; }
+  .meta { color: #888; font-size: 14px; }
+  .define { background: #f0f4fa; border-left: 4px solid #4a6fa5; padding: 14px 18px; margin: 16px 0; font-size: 15px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; font-size: 14px; vertical-align: top; }
+  th { background: #f0f4fa; white-space: nowrap; }
+  .boundary li { margin: 6px 0; }
+  .can { color: #2e7d32; } .cannot { color: #c62828; }
+  details { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 12px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: bold; }
+  a { color: #1565c0; }
+  .source { font-size: 14px; }
+  .note { font-size: 13px; color: #999; font-style: italic; }
+  .loop { background: #f9f7f0; border: 1px dashed #b8a24a; border-radius: 6px; padding: 12px 16px; margin: 14px 0; font-size: 14px; }
+  .goals li { margin: 8px 0; }
+  code { background: #f0f4fa; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>Skill（AI 技能 / 领域技能包）</h1>
+<p class="meta">学习深度：入门 ｜ 生成工具：WorkBuddy + concept-learning-generator Skill ｜ 生成日期：2026-09-10</p>
+
+<div class="define">
+<strong>一句话定义：</strong>Skill 是一份结构化的指令文件（通常是 SKILL.md，可附带脚本和资源），把"某一类任务该怎么做"的成熟经验沉淀下来；当用户的请求匹配到它的适用场景时，AI 自动加载这份文件，按其中的标准流程执行，而不必每次从零摸索。
+</div>
+
+<!-- ==================== 板块一：通俗解释 ==================== -->
+<h2>一、概念通俗解释</h2>
+<p><strong>先说一个生活化的类比：</strong>大模型像一个<strong>智商很高但刚入职的新员工</strong>——什么都会一点，但不了解"咱们这里这类活儿的标准做法"。你每次布置任务都得反复叮嘱："结构要这样、格式要那样、来源必须真实……"说得再细也难免遗漏。</p>
+<p>Skill 就是<strong>给这位新员工的一份工作手册（SOP）</strong>。你把反复交代过的要求、摸索出来的最佳流程，一次性写成一份规范文档放进系统里；从此以后你只需要说一句"帮我做 XX"，AI 就会自动取出对应的手册，按标准流程把活干到位。</p>
+<p>所以 Skill 解决的核心问题是<strong>经验复用</strong>：</p>
+<ul>
+<li>没有 Skill：每次都对 AI 重复同样的叮嘱（一次性 Prompt），说漏一条质量就打折；</li>
+<li>有了 Skill：把"一次性的叮嘱"升级成"永久的制度"——<strong>你教会 AI 一次，它以后每次都会</strong>。</li>
+</ul>
+<p>和另外两个概念对照着记更清楚：上下文（Context）决定 AI 此刻<strong>能看见什么</strong>；Skill 决定它遇到某类任务时<strong>按什么方法做</strong>；Agent 决定它<strong>要不要自己动手多步执行</strong>。</p>
+
+<!-- ==================== 板块二：核心机制与组成 ==================== -->
+<h2>二、核心机制与组成</h2>
+<p><strong>1. 一个 Skill 由什么构成？</strong>以 Anthropic 的 Agent Skills 规范为例（WorkBuddy 等产品采用类似设计）：</p>
+<table>
+<tr><th>组成</th><th>内容</th><th>作用</th></tr>
+<tr><td><strong>元数据（YAML 头）</strong></td><td><code>name</code>（技能名）、<code>description</code>（适用场景描述）等</td><td>AI 靠它判断"当前任务该不该调用我"——相当于技能的<strong>检索标签</strong>，描述写得越准，触发越可靠</td></tr>
+<tr><td><strong>正文（Markdown）</strong></td><td>角色设定、适用场景、输入格式、工作流程、输出结构、自检清单</td><td>一份完整的<strong>标准作业程序（SOP）</strong>，规定任务怎么做、做成什么样</td></tr>
+<tr><td><strong>附属资源（可选）</strong></td><td>脚本、模板、参考文档、代码片段</td><td>给流程配上趁手的工具和现成材料</td></tr>
+</table>
+
+<p><strong>2. 存放层级（以 WorkBuddy 为例）：</strong></p>
+<table>
+<tr><th>层级</th><th>位置</th><th>生效范围</th></tr>
+<tr><td><strong>项目级 Skill</strong></td><td><code>.workbuddy/skills/&lt;名称&gt;/SKILL.md</code>（随仓库提交）</td><td>仅当前项目；团队共享，全员 AI 行为一致</td></tr>
+<tr><td><strong>用户级 Skill</strong></td><td><code>~/.workbuddy/skills/</code></td><td>当前用户的所有项目</td></tr>
+</table>
+
+<p><strong>3. 触发与运转机制（Skill Loop）：</strong></p>
+<div class="loop">
+<strong>用户请求 → 匹配 description（要不要用这个技能？）→ 加载 SKILL.md 进上下文 → 按流程执行 → 产出结果 → 反思改进 → 更新 SKILL.md</strong><br>
+注意第 3 步：Skill 被加载的实质，是把方法论文本<strong>注入模型的上下文窗口</strong>（结合上一个概念理解：Skill 的工作方式 = 在恰当时机把对的资料放进窗口）。最后两步是知识管理闭环：用得越多、修订越勤，技能就越可靠。
+</div>
+
+<!-- ==================== 板块三：应用场景案例 ==================== -->
+<h2>三、实际应用场景案例</h2>
+<p><strong>案例：用 concept-learning-generator Skill 批量生成概念学习资料（本仓库的真实案例）</strong></p>
+<p>作者在学习 AI 概念时发现：一份合格的学习资料需要固定包含通俗解释、核心机制、应用案例、易混辨析、参考资料、学习目标、自测题——每次手写 prompt 交代这七项要求既啰嗦又容易遗漏。于是把这些要求沉淀成一个 Skill：</p>
+<ol>
+<li><strong>沉淀：</strong>编写 <code>.workbuddy/skills/concept-learning-generator/SKILL.md</code>，定义七板块输出结构和自检要求；</li>
+<li><strong>触发：</strong>此后只需一句"使用 concept-learning-generator 生成概念 XX 的学习资料"；</li>
+<li><strong>执行：</strong>AI 自动加载该文件，按固定结构生成 Agent、上下文、Skill 三份规格一致的 HTML 资料（包括本页）；</li>
+<li><strong>迭代：</strong>使用中发现结构需要调整，直接修改 SKILL.md，所有后续生成立即生效。</li>
+</ol>
+<p>其他典型场景：团队将代码规范、发布流程写成项目级 Skill 随仓库共享，保证每个成员的 AI 产出格式统一；个人把"周报怎么写""文献综述怎么做"沉淀成用户级 Skill，跨项目复用。</p>
+
+<!-- ==================== 板块四：易混淆概念辨析与使用边界 ==================== -->
+<h2>四、易混淆概念辨析 &amp; 使用边界</h2>
+<table>
+<tr><th>易混概念</th><th>关键区别</th></tr>
+<tr><td>Skill vs Prompt</td><td>Prompt 是<strong>一次性</strong>的指令，说完即失效，下次重写；Skill 是<strong>持久化、结构化、可复用、可迭代</strong>的方法论——本质是"被沉淀下来的最佳 Prompt + 流程"，触发后自动生效</td></tr>
+<tr><td>Skill vs 记忆（Memory）</td><td>记忆偏<strong>事实与偏好</strong>（用户是谁、喜欢什么风格）；Skill 偏<strong>方法与流程</strong>（这类任务该怎么做）。记忆提供输入信息，Skill 规定执行方式</td></tr>
+<tr><td>Skill vs 插件 / MCP 工具</td><td>插件是给 AI <strong>接入新的执行能力</strong>（联网搜索、读数据库）；Skill <strong>不新增执行能力</strong>，只是优化既有能力的使用方式——一个是"配新工具"，一个是"教方法"</td></tr>
+<tr><td>Skill vs 微调（Fine-tuning）</td><td>微调<strong>修改模型参数</strong>、改变模型本身，需要训练成本；Skill 完全不动模型，只是运行时注入指令文本。前者重且贵，后者轻且即改即生效</td></tr>
+</table>
+
+<p><strong>使用边界与局限性（重要，避免神化）：</strong></p>
+<ul class="boundary">
+<li class="cannot">❌ <strong>不新增底层能力：</strong>模型本身不具备的能力，Skill 给不了——本地模型不支持看图时，写得再好的 Skill 也无法让它看图。Skill 是"教方法"，不是"长本事"。</li>
+<li class="cannot">❌ <strong>触发依赖描述质量：</strong>description 写得含糊，该触发时不触发、不该触发时乱触发都会发生；技能好不好用，一半取决于元数据写得好不好。</li>
+<li class="cannot">❌ <strong>占用上下文窗口：</strong>SKILL.md 加载即进入上下文，技能写得冗长会挤占窗口、稀释注意力——好 Skill 应该精炼。</li>
+<li class="cannot">❌ <strong>内容质量取决于编写者：</strong>写进 Skill 的错误流程会被 AI 一丝不苟地执行放大；安装第三方 Skill 前应审查其内容，谨防恶意指令（提示注入）。</li>
+<li class="can">✅ <strong>适用判断标准：</strong>某类任务你<strong>重复做、有固定套路、要求稳定输出</strong>——就值得沉淀成 Skill；一次性的偶发任务则不必。</li>
+</ul>
+
+<!-- ==================== 板块五：参考资料 ==================== -->
+<h2>五、参考资料来源（可点击核查）</h2>
+<ul class="source">
+<li>Anthropic, <em>Agent Skills</em> 官方发布（2025，Skill 概念的提出与设计理念）：<a href="https://www.anthropic.com/news/skills" target="_blank">https://www.anthropic.com/news/skills</a></li>
+<li>Anthropic 工程博客，<em>Equipping Agents for the Real World with Agent Skills</em>（Skill 的工程实现细节）：<a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank">https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills</a></li>
+<li>Claude 官方文档，Agent Skills 概览（SKILL.md 结构规范）：<a href="https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview" target="_blank">https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview</a></li>
+<li>WorkBuddy 产品文档（本产品中 Skill 的存放层级与触发机制）：<a href="https://www.codebuddy.cn/docs/workbuddy/Overview" target="_blank">https://www.codebuddy.cn/docs/workbuddy/Overview</a></li>
+</ul>
+<p class="note">（提示：链接均需自行点击核查可访问性；若某链接失效，可按标题搜索找到新的发布地址。）</p>
+
+<!-- ==================== 板块六：学习目标 ==================== -->
+<h2>六、学习目标</h2>
+<p>学完本资料后，你应该能够：</p>
+<ul class="goals">
+<li><strong>解释：</strong>用自己的话说清 Skill 是什么、它解决的"经验复用"问题是什么；</li>
+<li><strong>拆结构：</strong>说出 SKILL.md 的两大组成部分（YAML 元数据 + 正文 SOP）及各自作用；</li>
+<li><strong>描述流程：</strong>复述 Skill 的触发运转机制（匹配 → 加载进上下文 → 执行 → 迭代更新）；</li>
+<li><strong>辨析：</strong>准确区分 Skill 与 Prompt、记忆、插件/工具、微调四个易混概念；</li>
+<li><strong>动手：</strong>为自己经常重复做的某类任务写出一个合格的 SKILL.md（含清晰的 description）；</li>
+<li><strong>保持清醒：</strong>说出 Skill 的至少三条局限，并能判断某类任务值不值得沉淀成 Skill。</li>
+</ul>
+
+<!-- ==================== 板块七：自测问题 ==================== -->
+<h2>七、自测问题</h2>
+<details><summary>1.【定义】Skill 和一次性 Prompt 最大的区别是什么？它解决的核心问题是什么？</summary><p>Skill 是持久化、结构化、可复用可迭代的任务方法论，触发后自动按流程执行；Prompt 一次性、用完即失效。Skill 解决的核心问题是"经验复用"——把每次重复交代的叮嘱变成一次编写、长期生效的制度。</p></details>
+<details><summary>2.【机制】SKILL.md 开头的 YAML 元数据（name / description）有什么用？</summary><p>它们是技能的"检索标签"：AI 依据 description 判断当前任务是否匹配、要不要加载该技能。描述写得越准确，触发越可靠。</p></details>
+<details><summary>3.【机制】Skill 被触发后，本质上发生了什么？（结合上下文窗口的概念回答）</summary><p>SKILL.md 的全文被注入模型的上下文窗口，成为模型此刻"看得见"的资料，模型据此按流程执行。Skill 的运转本质是"在对的时机把方法论放进窗口"。</p></details>
+<details><summary>4.【辨析】把"我喜欢简洁的文档风格"写进记忆文件，和写一个 Skill，有什么不同？</summary><p>记忆记录事实与偏好（用户是谁、喜欢什么），为任务提供输入信息；Skill 规定方法与流程（某类任务怎么做），控制执行方式。前者是"资料"，后者是"制度"。</p></details>
+<details><summary>5.【辨析】Skill 和微调（Fine-tuning）都能让 AI 表现得"更专业"，两者机制有何不同？</summary><p>微调通过训练修改模型参数，改变模型本身，成本高、生效慢但深入；Skill 完全不动模型参数，只是运行时把指令文本注入上下文，轻量、即改即生效。一个是"换脑子"，一个是"递手册"。</p></details>
+<details><summary>6.【思考】以下任务哪个适合写成 Skill，哪个不适合，为什么？（a）每周按固定格式整理读书笔记（b）让不会看图的模型识别照片</summary><p>(a) 适合：重复做、有固定套路、要求输出稳定，正是 Skill 的用武之地。(b) 不适合：模型本身不具备图片理解能力，Skill 只是教方法，无法新增底层执行能力——这需要换用多模态模型或接入视觉工具。</p></details>
+<details><summary>7.【思考】从团队协作仓库里安装了别人写的一个 Skill，直接用有什么风险？该怎么防范？</summary><p>风险：Skill 内容可能包含错误流程（被忠实执行放大）或恶意指令（提示注入，诱导 AI 执行危险操作）。防范：安装前人工审查 SKILL.md 及附属脚本的完整内容；来源不明的技能不装；重要操作保留确认环节。</p></details>
+
+</body>
+</html>

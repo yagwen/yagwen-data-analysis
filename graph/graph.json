@@ -1,0 +1,1162 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "generated_by": "tools/build_graph.py",
+  "node_count": 32,
+  "edge_count": 179,
+  "nodes": [
+    {
+      "id": "Git工作流",
+      "label": "Git工作流",
+      "type": "concept",
+      "path": "wiki/concepts/Git工作流.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "LLM上下文",
+      "label": "LLM上下文",
+      "type": "concept",
+      "path": "wiki/concepts/LLM上下文.md",
+      "community": 0,
+      "degree": 12
+    },
+    {
+      "id": "Skill",
+      "label": "Skill",
+      "type": "concept",
+      "path": "wiki/concepts/Skill.md",
+      "community": 0,
+      "degree": 10
+    },
+    {
+      "id": "总体与样本",
+      "label": "总体与样本",
+      "type": "concept",
+      "path": "wiki/concepts/总体与样本.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "推断统计",
+      "label": "推断统计",
+      "type": "concept",
+      "path": "wiki/concepts/推断统计.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "描述统计",
+      "label": "描述统计",
+      "type": "concept",
+      "path": "wiki/concepts/描述统计.md",
+      "community": 0,
+      "degree": 11
+    },
+    {
+      "id": "数据类型",
+      "label": "数据类型",
+      "type": "concept",
+      "path": "wiki/concepts/数据类型.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "智能体",
+      "label": "智能体",
+      "type": "concept",
+      "path": "wiki/concepts/智能体.md",
+      "community": 0,
+      "degree": 11
+    },
+    {
+      "id": "概念学习",
+      "label": "概念学习",
+      "type": "concept",
+      "path": "wiki/concepts/概念学习.md",
+      "community": 0,
+      "degree": 10
+    },
+    {
+      "id": "集中趋势与离散程度",
+      "label": "集中趋势与离散程度",
+      "type": "concept",
+      "path": "wiki/concepts/集中趋势与离散程度.md",
+      "community": 0,
+      "degree": 9
+    },
+    {
+      "id": "Anthropic",
+      "label": "Anthropic",
+      "type": "entity",
+      "path": "wiki/entities/Anthropic.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "Git",
+      "label": "Git",
+      "type": "entity",
+      "path": "wiki/entities/Git.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "GitHub",
+      "label": "GitHub",
+      "type": "entity",
+      "path": "wiki/entities/GitHub.md",
+      "community": 0,
+      "degree": 7
+    },
+    {
+      "id": "GLM",
+      "label": "GLM",
+      "type": "entity",
+      "path": "wiki/entities/GLM.md",
+      "community": 0,
+      "degree": 5
+    },
+    {
+      "id": "LilianWeng",
+      "label": "LilianWeng",
+      "type": "entity",
+      "path": "wiki/entities/LilianWeng.md",
+      "community": 0,
+      "degree": 7
+    },
+    {
+      "id": "pandas",
+      "label": "pandas",
+      "type": "entity",
+      "path": "wiki/entities/pandas.md",
+      "community": 0,
+      "degree": 8
+    },
+    {
+      "id": "Python",
+      "label": "Python",
+      "type": "entity",
+      "path": "wiki/entities/Python.md",
+      "community": 0,
+      "degree": 5
+    },
+    {
+      "id": "WorkBuddy",
+      "label": "WorkBuddy",
+      "type": "entity",
+      "path": "wiki/entities/WorkBuddy.md",
+      "community": 0,
+      "degree": 9
+    },
+    {
+      "id": "统计与数据分析课程",
+      "label": "统计与数据分析课程",
+      "type": "entity",
+      "path": "wiki/entities/统计与数据分析课程.md",
+      "community": 0,
+      "degree": 12
+    },
+    {
+      "id": "index",
+      "label": "index",
+      "type": "page",
+      "path": "wiki/index.md",
+      "community": 1,
+      "degree": 0
+    },
+    {
+      "id": "log",
+      "label": "log",
+      "type": "page",
+      "path": "wiki/log.md",
+      "community": 0,
+      "degree": 19
+    },
+    {
+      "id": "overview",
+      "label": "总览",
+      "type": "overview",
+      "path": "wiki/overview.md",
+      "community": 0,
+      "degree": 17
+    },
+    {
+      "id": "2026-09-03-环境搭建与git基础",
+      "label": "环境搭建与 Git 基础",
+      "type": "source",
+      "path": "wiki/sources/2026-09-03-环境搭建与git基础.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-agent学习资料",
+      "label": "Agent 学习资料",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-agent学习资料.md",
+      "community": 0,
+      "degree": 5
+    },
+    {
+      "id": "2026-09-10-llm上下文学习资料",
+      "label": "LLM 上下文学习资料",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-llm上下文学习资料.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-skill学习资料",
+      "label": "Skill 学习资料",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-skill学习资料.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-描述性统计入门练习",
+      "label": "描述性统计入门练习",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-描述性统计入门练习.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-数据类型与统计量练习",
+      "label": "数据类型与统计量练习",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-数据类型与统计量练习.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-概念关系综合分析",
+      "label": "概念关系综合分析",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-概念关系综合分析.md",
+      "community": 0,
+      "degree": 4
+    },
+    {
+      "id": "2026-09-10-统计学基础概念",
+      "label": "统计学基础概念",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-统计学基础概念.md",
+      "community": 0,
+      "degree": 6
+    },
+    {
+      "id": "2026-09-10-课程仓库说明",
+      "label": "课程仓库说明",
+      "type": "source",
+      "path": "wiki/sources/2026-09-10-课程仓库说明.md",
+      "community": 0,
+      "degree": 5
+    },
+    {
+      "id": "agent上下文skill三者关系",
+      "label": "Agent、上下文、Skill 三者关系",
+      "type": "synthesis",
+      "path": "wiki/syntheses/agent上下文skill三者关系.md",
+      "community": 0,
+      "degree": 6
+    }
+  ],
+  "edges": [
+    {
+      "from": "Git工作流",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git工作流",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git工作流",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LLM上下文",
+      "to": "agent上下文skill三者关系",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LLM上下文",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LLM上下文",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LLM上下文",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "agent上下文skill三者关系",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Skill",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "总体与样本",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "总体与样本",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "总体与样本",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "推断统计",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "推断统计",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "推断统计",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "推断统计",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "描述统计",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "数据类型",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "数据类型",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "agent上下文skill三者关系",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "智能体",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "概念学习",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "集中趋势与离散程度",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "集中趋势与离散程度",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "集中趋势与离散程度",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Anthropic",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Anthropic",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Git",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GitHub",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GitHub",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GitHub",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GLM",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GLM",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "GLM",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LilianWeng",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "LilianWeng",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "pandas",
+      "to": "Python",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "pandas",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "pandas",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "pandas",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Python",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Python",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "Python",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "WorkBuddy",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "WorkBuddy",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "WorkBuddy",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "WorkBuddy",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "WorkBuddy",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "Python",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "统计与数据分析课程",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Python",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "log",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "agent上下文skill三者关系",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "overview",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-03-环境搭建与git基础",
+      "to": "Git",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-03-环境搭建与git基础",
+      "to": "GitHub",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-03-环境搭建与git基础",
+      "to": "Git工作流",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-03-环境搭建与git基础",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "Anthropic",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-agent学习资料",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-llm上下文学习资料",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-llm上下文学习资料",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-llm上下文学习资料",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-llm上下文学习资料",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-skill学习资料",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-skill学习资料",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-skill学习资料",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-skill学习资料",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-描述性统计入门练习",
+      "to": "Python",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-描述性统计入门练习",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-描述性统计入门练习",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-描述性统计入门练习",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-数据类型与统计量练习",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-数据类型与统计量练习",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-数据类型与统计量练习",
+      "to": "pandas",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-数据类型与统计量练习",
+      "to": "2026-09-10-统计学基础概念",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-概念关系综合分析",
+      "to": "agent上下文skill三者关系",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "描述统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "推断统计",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "总体与样本",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "数据类型",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "集中趋势与离散程度",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-统计学基础概念",
+      "to": "2026-09-10-数据类型与统计量练习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "LilianWeng",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "统计与数据分析课程",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "概念学习",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "2026-09-10-课程仓库说明",
+      "to": "GLM",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "agent上下文skill三者关系",
+      "to": "LLM上下文",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "agent上下文skill三者关系",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "agent上下文skill三者关系",
+      "to": "智能体",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "agent上下文skill三者关系",
+      "to": "WorkBuddy",
+      "type": "EXTRACTED"
+    },
+    {
+      "from": "agent上下文skill三者关系",
+      "to": "Skill",
+      "type": "EXTRACTED"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>概念关系图：Agent、LLM 上下文、Skill</title>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 860px; margin: 0 auto; padding: 40px 24px; color: #333; background: #fff; line-height: 1.8; }
+  h1 { font-size: 26px; border-bottom: 3px solid #4a6fa5; padding-bottom: 10px; }
+  h2 { font-size: 20px; color: #4a6fa5; margin-top: 36px; }
+  .meta { color: #888; font-size: 14px; }
+  .diagram { background: #fafcff; border: 1px solid #e0e6f0; border-radius: 8px; padding: 24px; margin: 20px 0; text-align: center; }
+  .understanding { background: #f0f4fa; border-left: 4px solid #4a6fa5; padding: 14px 18px; margin: 16px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; font-size: 14px; }
+  th { background: #f0f4fa; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: "neutral" });</script>
+</head>
+<body>
+
+<h1>概念关系图：Agent、LLM 上下文、Skill</h1>
+<p class="meta">作者：yagwen ｜ 日期：2026-09-10 ｜ 配套资料：learning-materials/ 下的三份概念学习页</p>
+
+<h2>一、关系总览图</h2>
+<div class="diagram">
+<pre class="mermaid">
+graph LR
+  U[用户提出目标] --> A[Agent 智能体]
+  S[Skill 技能文件<br/>SKILL.md] -- "加载进上下文" --> C
+  M[记忆文件<br/>MEMORY.md] -- "加载进上下文" --> C
+  C[LLM 上下文窗口<br/>模型能看见的全部信息] --> L[LLM 大模型<br/>负责推理与决策]
+  A --> C
+  L --> T[工具调用<br/>搜索/写文件/执行代码]
+  T --> R[行动结果]
+  R -- "反馈进入下一轮上下文" --> C
+  R -- "经验沉淀为新 Skill / 记忆" --> S
+</pre>
+</div>
+
+<h2>二、我的理解：三者怎么协作</h2>
+<div class="understanding">
+<p><strong>用一句话串起来：</strong>Agent 是"人"，LLM 是它的"大脑"，上下文是大脑的"视野"，Skill 是它随身携带的"工作手册"。</p>
+
+<p><strong>1. 上下文的质量决定 Agent 的上限。</strong>Agent 再强，也只能基于上下文窗口里"看得见"的信息做决策。窗口里是清晰的指令和资料，它就表现专业；窗口里什么都没有，它就只能泛泛而谈。这解释了我以前的一个困惑：同一个 AI，有时像专家、有时像新手——差别往往不在模型，而在喂给它什么上下文。</p>
+
+<p><strong>2. Skill 是把"上下文"从临时变为持久的手段。</strong>上下文本身用完即清空，但 Skill 把"该放什么进上下文、按什么流程做"固化成文件，每次任务自动加载。它相当于对上下文的<strong>主动管理和复用</strong>——这和新闻传播里"把一次采访的素材整理成可检索的资料库"是一个道理。</p>
+
+<p><strong>3. 三者形成闭环。</strong>用户给目标 → Skill/记忆进入上下文 → LLM 基于上下文推理 → Agent 调用工具行动 → 结果反馈回上下文 → 做得好的方法沉淀成新 Skill。我在做本作业时亲历了这个闭环：AI 帮我生成的资料结构不错，我就把这套结构写成了 concept-learning Skill，下次直接复用。</p>
+</div>
+
+<h2>三、逐对关系速查</h2>
+<table>
+<tr><th>关系</th><th>一句话解释</th></tr>
+<tr><td>Agent → 依赖 → LLM 上下文</td><td>Agent 的每一步决策都只能基于当前上下文，上下文外的事它"看不见"</td></tr>
+<tr><td>Skill → 注入 → LLM 上下文</td><td>Skill 被触发时加载进上下文，把任务方法论带给模型</td></tr>
+<tr><td>Agent → 调用/沉淀 → Skill</td><td>Agent 执行时按 Skill 的流程走；执行中验证有效的新方法可写回 Skill，形成迭代</td></tr>
+</table>
+
+</body>
+</html>
